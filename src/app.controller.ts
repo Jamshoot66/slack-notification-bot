@@ -12,6 +12,12 @@ export class AppController {
 
   @Post()
   gitlabWebhookReceiver(@Body() props): Promise<void> {
+    console.log('');
+    console.log(
+      `[${new Date().toISOString()}] GOT NEW REQUEST ======================================================`,
+    );
+    console.log('');
+    console.log(props);
     return this.appService.parseWebhook(props);
   }
 }
