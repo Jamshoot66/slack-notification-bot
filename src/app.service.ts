@@ -77,6 +77,7 @@ export class AppService {
           newLine = newLine
             .replace(linkMatches[0], `<${linkMatches[2]}|${linkMatches[1]}}>`)
             .replace('(', '')
+            .replace(')', '')
             .replace('}', '');
         }
 
